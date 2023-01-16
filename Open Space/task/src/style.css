@@ -1,0 +1,92 @@
+body {
+    background-color: black;
+}
+
+.space {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("img/space.png");
+    overflow: hidden;
+}
+
+.planet-area {
+    position: relative;
+    height: 100vh;
+    left: -10px;
+    bottom: -10px;
+}
+
+.planet {
+    position: absolute;
+    bottom: 0;
+}
+
+.rocket {
+    transform: rotate(30deg);
+    position: absolute;
+    left: 200px;
+    bottom: 250px;
+    transition: transform 3s linear;
+}
+
+.control-panel {
+    background:
+            radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.15) 30%, rgba(255,255,255,.3) 32%, rgba(255,255,255,0) 33%) 0 0,
+            radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.3) 13%, rgba(255,255,255,0) 14%) 0 0,
+            radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 17%, rgba(255,255,255,.43) 19%, rgba(255,255,255,0) 20%) 0 110px,
+            radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) -130px -170px,
+            radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.2) 11%, rgba(255,255,255,.4) 13%, rgba(255,255,255,0) 14%) 130px 370px,
+            radial-gradient(rgba(255,255,255,0) 0, rgba(255,255,255,.1) 11%, rgba(255,255,255,.2) 13%, rgba(255,255,255,0) 14%) 0 0,
+            linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0b1284 50%, #760ea1 60%, #83096e 70%, #840b2a 80%, #b13e12 90%, #e27412 100%);
+    background-size: 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100%;
+    background-color: #840b2a;
+    position: absolute;
+    top: 40vh;
+    right: 200px;
+    padding: 20px;
+}
+
+.control-panel__inner {
+    background-color: darkslategrey;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+.check-buttons {
+    display: flex;
+    flex-grow: 1;
+    gap: 30px;
+}
+
+form {
+    flex: 1 1 100%;
+}
+
+input.password {
+    border: #d4e12a 3px solid;
+    color: #760ea1;
+}
+
+input[type=submit], input[type=button] {
+    background-color: #840b2a;
+    height: 50px;
+}
+
+input[type=button] {
+    border-radius: 5px;
+}
+
+.levers {
+    display: flex;
+    gap: 30px;
+}
+
+.levers input[type=range] {
+    appearance: slider-vertical;
+    width: 30px;
+}
